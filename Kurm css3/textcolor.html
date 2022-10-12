@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>color and backgroung color for text</title>
+        <link rel="stylesheet" href="textcolor.css">
+        <!-- <link rel="stylesheet" href="https://fonts.google.com/knowledge"> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <h1 class="head">Heading welcome</h1>
+    
+    <p class="border"><span>border:</span><br><br>
+        <b>border : width style color;</b>
+        <br>
+        (style=solid dotted dashed double groove ridge inset outset none )
+    </p>
+    
+    <p class="outline">
+        <span>outline:</span>
+        <br><br>
+        <b>outline: width style color;</b>
+        <br>
+        (<b>Number of styles</b>=solid / dotted / dashed / double / groove / ridge / inset / outset / none);
+        <br>
+        <b>outline-offset: 10px;</b> (gap betweenoutline and border )
+    </p>
+
+
+    <p class="padding">
+        <span>padding:</span>
+        <br><br>
+        padding: (10px) (15px);<br>
+        padding: (top+bottom)  (right+left);<br>
+        padding: 10px (15px) 20px;<br>
+        padding: top (right+left) bottom;<br>
+        padding: 10px 10px 10px 10px;<br>
+        padding: top right bottom left;<br>
+    </p>
+    
+    <div id="margin">
+        <span>margin:</span> <br>
+        <p> margin-top: 100px;<br>
+            margin-right: 50px;<br>
+            margin-bottom: 50px;<br>
+            margin-left: 50px;<br>
+            <br>
+            margin: 90px;<br>
+            margin: 10px 20px;<br>
+            margin: 10px 20px 30px;<br>
+            margin: 10px 20px 30px 40px;<br>
+            <br>
+            <b>(auto leva width jaruri)</b><br>
+            width: 500px; (margin: auto;)<br>
+            margin: 0 auto 0 auto;<br>
+        </p>
+    </div>
+
+    <br><br>
+    <div id="width">
+        <span>width and height:</span> <br>
+        <p>
+            <img src="images/car.jpg" alt="">
+        </p>
+        <p>
+            width: 100px; <br>
+            height: 50px; <br>
+            width: 20%; <br>
+            <b>(height pixel ma j levi);</b>
+        </p>
+        <p>
+            <b>min-height: 200px;</b>(minimum height aapva thi contained he aem box ni size vadhe)
+            <br>
+            <b>max-height: 200px;</b>(maximum height ma overflow thya)
+
+            min-width= 200px; ()
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, quae ipsum quod ipsa quasi similique ducimus et alias quam corporis ullam beatae. Distinctio odio accusamus blanditiis, nisi omnis iure dolore!
+        </p>
+    </div>
+
+    <div id="boxsizing">
+        <p>
+            <span>box-sizing:</span>
+            <br><br>
+            <b>box-sizing: border-box; </b>(box ni size fix rehshe) (padding ni width par ashar thati nthi)
+            <br><br>
+            <b>box-sizing: content-box;</b> (box ni size fix nh rhe padding and border ni width sathe change thashe) 
+            <br><br>
+            ~jo padding aapiae to height vadhi jase pn width same rehse (border-box thi)  
+        </p>
+
+    </div>
+
+    <div id="overflow">
+        <p>
+            <span>overflow:</span>
+            <p>
+                <img src="images/car.jpg" alt="">
+            </p>
+            <br>
+            <b>overflow: hidden;</b> je vastu overflow thati hoy ae hide thay.
+            <br>
+            <b>overflow: scroll;</b> horizontal and vertical scrolling bar aavi jase.
+            <br>
+            <b>overflow: auto;</b> jyare overflow thase tyare j scrolling bar aavse.
+            <br>
+            <b>overflow: visible;</b> je vastu overflow thati hoy ae overflow thayeli dekhay.
+            <br>
+            <b>overflow-x: hidden/scroll/auto/visible;</b>
+            <br>
+            <b>overflow-y: hidden/scroll/auto/visible;</b><br>
+
+
+            <span>text-overflow</span>
+            <p>
+                <b>text-overflow:</b> clip; (by default) <br>
+                <b>text-overflow:</b> ellipsis; (ellipsis sathe white-space: nowrap; and overflow:hiddemn; lakhvu jaruri) <br>
+                <b>text-overflow:</b> string, <br>
+                <h2>text-overflow:"etc."; <br> aavu lakhiye to overflow thaya pachhi aavu[etc.] lakhelu aave.</h2> <br><br> 
+            </p>
+        </p>
+
+    </div>
+    <br><br>
+
+    <div id="borderradius">
+        <p>
+            <span> border-radius:</span><br>
+            <img src="images/borderradius.jpg" alt="">
+            <br><br>
+            <b>border-top-left-radius;</b> upar ni image (border radius top-left) batave chhe
+            <br>
+            <b>border-bottom-right-radius;</b> 
+            <br>
+            <b>border-bottom-right-radius;</b> 
+            <br>
+            <b>border-top-left-radius;</b> 
+            <br>
+            <b>border-radius: 10px 10px;</b> (vayavy+agni) (ishan+nairutya) <br>
+            <b>border-radius: 10px 10px 10px;</b> <br>
+            <b>border-radius: 10px 10px 10px 10px;</b>
+            <br>
+            <b>bprder-radius: 50%;</b> (box na corner round ma thase)
+            <br>
+            <b>~~~border is either in pixel or in pecentage;</b>
+        </p>
+
+    </div>
+
+    <br><br>
+
+    <div id="boxshadow">
+        <p>
+            <span>box-shadow:</span><br>
+            <img src="images/boxshadow.png" alt="">
+            <br>
+            <b>box-shadow:(horizontal-offet) (vertical-offset) (blue) (spread) (color)</b>
+            <br>
+            <b>box-shadow: 20px -20px 5px 10px orange;</b> 
+            <br>
+            <b>h-offset</b> = +ve or -ve (shadow ne right&left ma kari sakiye )<br>
+            <b>v-offset</b> = +ve or -ve (shadow ne top&bottom ma kari sakiye)<br>
+            <b>blur</b> = 1px to 10px; <br> 
+            <b>spread</b> = amuk pixel shadow ne dur padva.
+            <br><br>
+            <b>box-shadow: 10px 6px red,12px 3px green,8px 5px blue;</b>
+        </p>
+    </div>
+
+    <br><br>
+    <div id="textshadow">
+        <span>text-shadow</span> <br>
+        <b>text-shadow:</b> h-shadow v-shadow blur-radius color;<br>
+        <b>text-shadow:</b> 3px 9px 1px red;
+
+        
+    </div>
+    
+    <br><br>
+
+
+    <div id="float">
+        <span>Float and Clear:</span><br>
+        <div class="first">
+            <p>
+                float: left;<br>
+                float: right;<br>
+                float: none;(by default) <br>
+                <br>
+                clear: left;<br>
+                clear: right;<br>
+                clear: both;(left and right banne mathi koi overlap nhi thay)
+            </p>
+        </div>
+        <div class="second">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo consequatur ipsum corrupti totam, facere eveniet nisi illo aliquid maiores consectetur! Doloremque minus, distinctio inventore aut rerum dolores quos autem ut error, quia impedit assumenda! Doloribus totam dolorum, voluptate blanditiis veritatis nobis a accusantium! Rerum incidunt perspiciatis, doloremque reprehenderit nobis et.</p>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit beatae labore minus recusandae nisi aut accusantium veniam corrupti similique illum? Doloribus fugiat totam sint aliquam dolorum molestias veritatis possimus sapiente labore minima omnis, quidem, blanditiis deleniti. Eos illum nobis ipsam quae nam commodi, architecto temporibus sint nesciunt laudantium quo. Qui ad sequi ullam esse voluptates illum consequatur mollitia quasi modi quidem repellat, reprehenderit nesciunt expedita incidunt quia ut assumenda ipsam magni placeat dolor ratione quisquam. Numquam dignissimos, similique vero, doloribus corporis excepturi aspernatur porro natus asperiores, sint itaque praesentium. Consectetur molestias doloremque rem omnis similique reiciendis expedita excepturi fugiat quis.</P>
+        </div>
+        <div class="third">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo consequatur ipsum corrupti totam, facere eveniet nisi illo aliquid maiores consectetur! Doloremque minus, distinctio inventore aut rerum dolores quos autem ut error, quia impedit assumenda! Doloribus totam dolorum, voluptate blanditiis veritatis nobis a accusantium! Rerum incidunt perspiciatis, doloremque reprehenderit nobis et.</p>
+
+        </div>
+    </div>
+
+
+    <br><br>
+    
+    <div id="font">
+        <span>font properties:</span>
+        <p>
+            font: italic small-caps 900 20px/25px arial; <br><br>
+            font: style varieant weight size/height family;<br><br>
+
+            ~font-style: normal / italic / oblique;<br>
+            ~font-variants: normal / small-caps;<br>
+            ~font-weight: 100 to 900 / normal / bold / bolder / lighter;<br>
+            ~font-size: small / smaller / x-small / Xx-small / medium / large / x=large / Xx-large;(x=extra).<br>
+            ~line-height: 10px;(be line vachche ni space). <br>
+            ~font-family: arial,helvetica,verdana; (3 fonts nakhva and koik browser ma na hoy to bydefaulut font aave).
+        </p>
+        <br><br>
+        
+    
+    </div>
+
+    
+    <br><br>
+
+    <div id="text">
+        <span>Text properties</span> <br>
+        <p>
+            <b>color:</b> red; (text ne color aapva) <br>
+        </p>
+        <p>
+            <b>text-align:</b> left / right / justify;<br>
+            <b>text-align-last:</b> left / right / justify / center / start / last / auto;<br>
+            <b>text-transformation:</b> none / capitalize(first letter capital) / lowercase / highercase;<br>
+            <b>text-indent:</b> 100px;(paragraph starts after 100pixel). <br>
+            <b>word-spacing:</b> 50px;(word vachche spacing). <br>
+            <b>letter-spacing:</b> 2px;(letter vachche spacing),<br>
+        </p>
+        <p><span>Text-decoration:</span></p>
+        <p>
+            <b>text-decoration:</b> line color style;<br>
+            <b>text-decoration:</b> linethrough green dotted;<br>
+
+            <b>text-decoration-line:</b> none / underline / overline / linethrough. <br>
+            <b>text-decoration-color:</b> green; <br>
+            <b>text-decoration-style:</b> solid / dotted / double / dashed /wavy. <br>
+
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsam ratione aspernatur quisquam, quos nihil perspiciatis ab quae sequi illo.
+         </p>
+         
+    </div>
+
+    <br><br>
+
+    <div id="wordwrap">
+        <span>word-wrap:</span>
+        <p>
+            <b>word-wrap:</b> break-word; (only mota word ne j break karshe and nana word ne break nhi kare and overflow nhi thay). <br>
+            <b>word-wrap:</b> normal; (word overflow thase). <br>
+
+        </p>
+
+        <span>word-break:</span>
+        <p>
+            <b>word-break:</b> keep-all;(hoy aem j rhe ). <br>
+            <b>word-break:</b> break=all;(nana and mota badha j words break thase). 
+        </p>
+
+    </div>
+
+    <br><br>
+    
+    <div id="whitespace">
+        <span>white-space</span><br>
+
+        <b>white-space:</b> normal / nowrap; no space count and only one space count.
+        
+        <b>white-space:</b> pre / pre-wrap ; jevu lakho jetli space aapo atlu badhu work kare.
+        
+        <b>white-space:</b> pre-line; pre-line= "br" tag vagar niche ni line ma j rahe pn single j space muke.
+
+    </div>
+
+    <br><br>
+
+    <div id="writingmode">
+        <span>Writing-mode</span> <br>
+        <p>
+            <b>writing-mode:</b> horizontal-tb; (top-bottom)(by default aavi rite lakhay) <br>
+            <b>writing-mode:</b> vertical-rl    (right to left) <br>
+            <b>writing-mode:</b> vertical-lr    (left to right) <br>
+            <b>writing-mode:</b> sideways-rl (for firefox) <br>
+            <b>writing-mode:</b> sideways-lr (for firefox) <br>
+        </p>
+    </div>
+    <br><br>
+
+    <div id="columncount">
+        <h2 class="columnspan">Column-count:</h2>
+
+        <p> <b>column-span:</b> all;<br>
+            <b>column-count:</b> 3; <br> or  <br>
+            <b>column-width:</b> 150px; (count or width) <br>
+            <b>column-rule:</b> 5px dotted red; (column-rule: width style color)(column vachche line draw karva). <br>
+            <b>column-gap:</b> 40px;<br>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tenetur delectus ratione officia sunt quibusdam, quisquam nihil sapiente autem eveniet quasi ex? Consequuntur, voluptas inventore fugiat quisquam voluptate facere dolores maiores accusantium animi beatae delectus nisi voluptatibus molestias ipsum suscipit ipsam optio praesentium incidunt iste soluta distinctio. Rerum eveniet ad consequatur libero voluptates ratione architecto, officiis, excepturi, possimus soluta ex nesciunt. Tempore mollitia dolor porro corrupti dolorum consectetur sit aspernatur laboriosam voluptatibus quo, labore sequi iure explicabo necessitatibus itaque illum? Distinctio error aut maiores blanditiis rerum facilis quisquam voluptates aperiam illum suscipit corrupti magni amet nulla, neque ut aliquid. Quod.
+        </p>
+    </div>
+    <br><br>
+
+        
+    <div id="fontfacerule">
+        <span>@font-face rule</span> <br>
+        <p>
+            <b>font-family:</b> myFirstFont; (font-family ma aapni rite navu name aapi sakiye pn without space between two name)<br>
+            "font-family" ma amuk fix font style =s chhe pn aapne biji style woff file thi aapi sakiye.
+            <br>
+            <b>src:url(fonts/web_font.woff);</b>(aavu lakhvu)
+        </p>
+        <p>
+            if we need tp use more than two fonts then use google fonts,
+            <br>
+            <b>google fonts</b> pn vapri sakiye jethi font mate loading speeed ghati jai.
+        </p>
+    </div>
+
+    <br><br>
+
+    <div id="liststyle">
+        <span>List-style</span> <br>
+        <p>
+            <b>list-style:</b> circle  inside  url(images/right-arrow.png); <br>
+            <b>list-style:</b> type  position  image; <br><br>
+            <b>list-style-type:</b> for "ul" -> none / disc / circle / square. <br>
+            <b>list-style-type:</b> for "ol" -> decimal(bydefault) / upper-alpha / lower=alpha / upper-roman / lower-roman / none. <br>
+            <b>list-style-postion:</b> outside(bydefault) / inside(aana thi data andar jashe). <br>
+            <b>list-style-image:</b> src:url(images/car.jpg) ; <br>
+        </p>
+        <ul class="liststyle1">
+            <li>1ADI</li>
+            <li>2SK</li>
+            <li>3IT</li>
+            <li>4AS</li>
+        </ul>
+    </div>
+    <br><br>
+
+    <div id="background">
+        <span>background</span> <br>
+        <p>
+            <b>background:</b> color image  repeat  position; <br>
+            <b>background:</b> url(images/flower.jpg) no-repeat right-center; <br>
+            <br>
+            <b>background-image:</b> url(images/flower.jpg) <br><br>
+            {{{{{{{{{{<br>
+                <b>background-repeat:</b> repeat(bydefault) / no-repeat / repeat-x / repeat-y / space / round; <br>
+                1)repeat; -> image repeat thay;<br>
+                2)no-repeat; -> aek var j image aave;<br>
+                3)repeat-x; -> image only horizontally repeat thay;<br>
+                4)repeat-y; -> image only vertically repeat thay;<br>
+                5)space; -> image repeat (repeat in vertically and horizontally) + image vachche space aavshe;<br> 
+                6)round; -> image moti(vertically and horizontally banne baju strech) thay. <br>
+            }}}}}}}}}}<br><br>
+            {{{{{{{{{{<br>
+                <b>background-position: </b> left-top / left-center / left- bottom; <br>
+                <b>background-position: </b> right-top / right-center / right- bottom; <br>
+                <b>background-position: </b> center-top / center-center / center- bottom; <br>
+                <b>~position ne aavi rite lakhi sakiye -> </b> 20%(horizontal left side thi 20%) 30%(vertically top thi 30% niche) / 200px 300px / left-right  <br>
+                <b>background-position: (horizontal-axis)-(vertical-axis);</b> <br>
+                ~~~(left-top) means -> image will be horizontally left and vertically top;<br>
+            }}}}}}}}}}<br><br>
+            {{{{{{{{{{ <br>
+                <b>Two images add karva:</b> <br>
+                background-image: url(images/flower.webp), url(images/car.jpg);<br>
+                background-repeat: no-repeat, no-repeat;<br>
+                background-position: 40% 10%, right-center;<br>
+            }}}}}}}}}}
+        </p>
+        <p>
+            =========================================<br>
+            <br>
+                <b>background-attachment:</b> fixed(image fix and text scroll thase) / scroll (text + image banne sathe scroll thashe);<br>         
+        </p>
+        <p>
+            =========================================<br>
+            <br>
+            <b>background-size:</b> cover / contain / auto / length / percentage  <br>
+            <b>cover;</b> => image aakha box ma fit thai jai; <br>
+            <b>contain;</b> => image ni width and height banne change thase => width(%) height(%) / width(px) height(px) / 20% / 200px / auto(image jetli chhe aetli j rhe) <br>
+        </p>
+        <p>
+            =========================================<br>
+            <br>
+            <b>image ne kya thi saru karvi aena mate: "background-origin"</b><br>
+            <br>
+            <b>background-origin:</b> border-box / content-box / padding-box; <br>
+            border-box; => jyathi bordr saru thay tya thi j image saru thay. <br>
+            content-box; => content thi image saru thay. <br>
+            pdding-box => padding hoy tya thi image saru thay. <br>
+        </p>
+        <p>
+            =========================================<br>
+            <br>
+            <b>background ma rahel color ne kya thi saru karvo aena mate: "background-clip"</b><br>
+            <br>
+            <b>background-clip:</b> border-box / content-box / text(experiment mode) / padding-box; <br>
+            border-box; => background ma aapel color border thi start thase. <br>
+            text; => image, text ma convert thai jai. (text no color image jevo thai) (image + text = mix thai) <br>
+        </p>
+
+    </div>
+    
+    <br><br>
+
+    <div id="gradients">
+        <div class="linear_gradient">
+            <p>
+                <b>background:</b> linear-gradient / radial-gradient / repeating-linear-gradient / repeating-radial-gradient; <br>
+                <br>
+                <b>linear-gradient( direction , color , color , color )</b> <br><br>
+                <b>background:</b> linear-gradient(to right, red, yellow) ; <br>
+                <b>background:</b> linear-gradient(to bottom right, red, yellow, blue) ; <br>
+                <b>background:</b> linear-gradient(45deg, red, yellow) ;(+ve degree means bottom(0deg) thi left(90deg) baju angle change thay ) <br>
+                <b>background:</b> linear-gradient(-60deg, red, yellow, blue) ; (-ve degree means bottom(0deg) thi right(90deg) baju angle change thay ) <br>
+                <b>background:</b> linear-gradient( red 10%, yellow 20%, blue 30%) ; (color ne percentage ma pn aapi saliye) <br>
+                <br>direction =>  jo direction na lakhiye to direction bydefault top to bottom work thay.<br>
+                [without direction Example => background: linear-gradient(red, yellow, blue);] <br>  <br>
+
+                <b>repeating-linear-gradient:</b><br><br>
+                <b>background:</b> repeating-linear-gradient(direction, color in %, color in %, color in %); <br>
+                <b>background:</b> linear-gradient(red 10%, yellow 20%, blue 30%); <br>
+                <b>~~~~reapeating gradient ma color ne percentage ma leva)</b><br>
+            </p>
+        </div>
+        <div class="radial_gradient">
+            <p>
+                
+                <br>
+                <b>radial-gradient()</b> <br>
+
+                <b>background:</b> radial-gradient("shape", color, color, color); <br>
+                <b>background:</b> radial-gradient(circle, red 5%, yellow 15%, green 60%); <br>
+                <b>shape => </b> lips / circle; <br>
+                <b>background:</b> radial-gradient("sizes" at horizontal% vertical%, color in %, color in %, color in %); <br>
+                <b>background:</b> radial-gradient(circle, red 5%, yellow 15%, green 60%); <br>
+                <b>background:</b> radial-gradient(closest-side at , red 5%, yellow 15%, green 60%); <br>
+                <b>size/b> =></b> closest-side at _% _% (closet-side thi circle side ma thay) /closest-corner at _% _% / farthest-side at _%_% / farthest-corner at _%_%; <br>
+                <br>
+                <b>repeating-radial-gradient:</b><br><br>
+                <b>background:</b> repeating-linear-gradient(direction, color in %, color in %, color in %); <br>
+                <b>background:</b> linear-gradient(closest-corner at 5% 15%,red 10%, yellow 20%, blue 30%); <br>
+                <b>~~~~reapeating gradient ma color ne percentage ma leva)</b><br>
+            </p>
+        </div>
+ 
+    </div>
+
+
+
+
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+</body>
+</html>
