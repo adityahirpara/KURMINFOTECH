@@ -155,7 +155,7 @@
             <span>box-shadow:</span><br>
             <img src="images/boxshadow.png" alt="">
             <br>
-            <b>box-shadow:(horizontal-offet) (vertical-offset) (blue) (spread) (color)</b>
+            <b>box-shadow:(horizontal-offet) (vertical-offset) (blur) (spread) (color)</b>
             <br>
             <b>box-shadow: 20px -20px 5px 10px orange;</b> 
             <br>
@@ -353,7 +353,7 @@
     <br><br>
 
     <div id="background">
-        <span>background</span> <br>
+        <span>Background:</span> <br>
         <p>
             <b>background:</b> color image  repeat  position; <br>
             <b>background:</b> url(images/flower.jpg) no-repeat right-center; <br>
@@ -421,6 +421,7 @@
 
     <div id="gradients">
         <div class="linear_gradient">
+            <span>linear-gradient:</span>
             <p>
                 <b>background:</b> linear-gradient / radial-gradient / repeating-linear-gradient / repeating-radial-gradient; <br>
                 <br>
@@ -440,10 +441,9 @@
             </p>
         </div>
         <div class="radial_gradient">
+            <span>radial-gradient:</span>
             <p>
-                
-                <br>
-                <b>radial-gradient()</b> <br>
+                <b>radial-gradient()</b> <br><br>
 
                 <b>background:</b> radial-gradient("shape", color, color, color); <br>
                 <b>background:</b> radial-gradient(circle, red 5%, yellow 15%, green 60%); <br>
@@ -459,17 +459,447 @@
                 <b>~~~~reapeating gradient ma color ne percentage ma leva)</b><br>
             </p>
         </div>
- 
+
+        <div id="opacity">
+            <span>opacity:</span>
+                <p>
+                    opacity: 0.5; (vary from 0.0 to 1.0); <br>
+                    filter: alpha(opacity = 50); (opacity sathe vaparvu pade); <br>
+                </p>
+        </div>
+
+        <div id="backgroundblend">
+            <span>background-blend-mode</span>
+            <p>
+                <b>mix two things either "image+backgroundcolor"  or  "image+image"  </b> <br>
+                <b>background-color:</b> yellow; (jo linear gradient nhi hoy to aa color and image mix thase)<br>
+                <b>background-image:</b> linear-gradient(to right, red, yellow, blue), url(images/flower.jpg); <br>
+                <b>backgroundblend mode:</b> screen multiply / overlay/ darken/ lighten/ color/ color-bodge/ color--burn/ hrd-light/ soft-light/ difference/ exclusion/ hue/ saturation/ luminosity/ normal(Bydefault); <br>
+                <br><br>
+                <span>mix-blend-mode</span>
+                <b>mix-blend-mode: screen;</b> <br>
+                ~~merge(image + text background color + text khud) badha ne merge karva; <br>               
+                <b>mix-blend-mode:</b> screen multiply / overlay/ darken/ lighten/ color/ color-bodge/ color--burn/ hrd-light/ soft-light/ difference/ exclusion/ hue/ saturation/ luminosity/ normal(Bydefault); <br>
+            </p>
+        </div>
+
+        <br><br>
+        
+        <div id="display">
+            <span>Display</span> <br>
+                <b>display:</b> inline; <br>
+                ~~(aek tag thi bija tag ne power aapva); <br>
+                ~~(div ne table ni power aapiye to div table ni jem kam kare); <br>
+                <br>
+                <b>Display properties:</b><br>
+                <b>display:</b> inline/ block/ inline-block/ list-item/ flex*/ grid*/ inline-flex*/ inline-grid*; <br>
+                <b>display:</b> table/ inline-table/ table-row/ table-cell/ table-column/ table-caption/ table-column-group/ table-row-group/ table-header-group/ table-footer-group/ run-in*/ contents* <br>
+                <br>
+                <br>
+                inline; => row ne column ma karva. <br>
+                block; => column ne row ma karva. <br>
+                inline-block; => margin and padding banne work karavva. <br>
+                list-item; => "li" ni jem work kare. <br>          
+
+        </div>
+        <br><br>
+        
+        <div id="visibility">
+            <span>Visibility</span>
+            <p>
+                <b>visibility:</b> collapse; <br>
+                <b>visibility:</b> hidden/ collapse/ visible; <br>
+                <br><br>
+                display:none; => thi text na dekhay ke jagya pan na dekhai.
+                <br>
+                but display:hidden; => thi text na dekhai pan jagya to rahe j chhe. <br>
+                collapse; => aakhi row dekhati bandh. <br>
+                
+            </p>
+        </div>
+
+        <br><br>
+
+        <div id="position">
+            <span>Position:</span> <br>
+            <h1>relative</h1>
+            <p>
+                <b>position:</b> absolute; <br>
+                ~~(postion sathe top and left aapvu jaruri)(top or bottom be mathi aek)(left or right). <br>
+                <br>
+                <b>Position properties:</b> <br>
+                <b>position:</b> static/ relative/ absolute/ fixed/ sticky*; <br>
+                <br>
+                fixed => aanathi page scroll thashe pan box scroll nhi thay. <br>
+                sticky; => page sathe scroll nhi thay (position pramane jagya leshe, screen pramane jagya nhi le). <br>
+                relative; => aek box, text ni vachche lidhel chhe and relative property aapva thi box, text ni upar jae. <br>
+                absolute; => text sathe overlap thay and box scroll thase. (aa property screen postion pramane kam kare) <br>
+                <br><br>
+                <b>combo => relative + absolute</b> <br>
+                relative and absolute banne property aek sathe vaparva thi(absolute valu box, relative na box ma j rhe chhe). <br>
+            </p>
+        </div>
+
+        <br><br>
+        
+        <div id="z_index">
+            <span>z-index:</span> <br>
+            <p class="indexA">
+                A
+            </p>
+            <p class="indexB">
+                B
+            </p>
+            <p class="indexC">
+                C
+            </p>
+            <p>
+                ~~ z-index => 3rd axis chhe. <br>
+                <b>z-index:</b> 1/ 2/ 3/ 4/ to infinite; <br>
+                ~~ je box ma "z-index: 1;" lakhishu ae box aakhu dekhase and bija boxes hide thashe. <br>
+                ~~ aama position sathe (top with left) banne aapvu joiae jethi vadhu khbr pade. <br>
+
+            </p>
+        </div>
+        <br><br>
+
+        <div id="tableproperties">
+            <span>Table Properties:</span>
+            <p>
+                <b>border-spacing:</b> 10px 20px; <br>
+                ~~(10px column ma change and 20px row ma change). <br><br>
+                <b>border-collapse:</b> collapse / separate; <br>
+                ~~separate; => (bydefault cell and border separate rehshe)/ <br>
+                ~~collapse; => (cell and border vachche space nhi rhe). <br><br>
+                <b>vertical-align:</b> top / bottom / middle; <br>
+                ~~top; => cell ma lakhel content top thashe. <br><br>
+                <b>padding:</b> 10px;(cell ma padding aapse). <br> <br>
+                <b>caption-side:</b> top(bydefault) / bottom; (<b>table nu name:</b> upar rakhvu ke table ni niche?) <br>
+                ~~html ma "caption" tag vaparvo and pachhi css ma "caption-side" vaparvu. <br><br>
+                <b>empty-cell:</b> hide; <br>
+                ~~empty-cell: hide; lakhya pachhi (border-collapse: separate;) lakhvu jaruri (to j cell empty dekhase). <br> <br>
+                <b>table-layout:</b> auto / fixed; <br>
+                ~~auto => text vadhe aem table ni width vadhe. <br>
+                ~~fixed => text vadhe to table ni fixed rhe and text oevrlap thay. <br>
+                 (fixed layout ma content vadhe aem width vadhe)<br>
+            </p>
+            <table class="firsttable">
+                <caption>Table Useless</caption>
+                <tr>
+                    <td>tr:nth-child(even){
+                        background: rgb(143, 114, 114);
+                    } <br>
+                    aavu lakhva thi beki rows ma color aavshe.
+                    </td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, ex.</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, vel?</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, reiciendis.</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
+
+        <br><br>
+
+        <div id="resize">
+            <span>Resize:</span> <br>
+            <p>
+                <b>resize: </b> horizontal / vertical / both / none(bydefault); <br>
+                ~~resize pella over flow vaparvu pade + overflow:auto; (overflow help proprty vaparvi pade) <br>
+                horizontal => text horizontally box ma scroll thashe. <br>
+                vertically => text vertically box ma scroll thashe. <br>
+                both => text, horizontally and vertically scroll thashe. <br>
+
+                <br>
+                ~~html na "textarea" tag ma resize properrty by default hoy chhe, but css ma textarea{resize:none;} lakva thi aa resize property bandh thay chhe.<br>
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur laborum consectetur ratione nulla harum, eius sunt natus! Corrupti dolores itaque error alias. Asperiores magnam expedita earum accusantium, laboriosam, cum accusamus sequi vero temporibus facere repellat ipsa sit ipsam! Deleniti corrupti deserunt eius laborum molestias voluptas aliquid ipsam ad doloremque, delectus commodi molestiae quod cum obcaecati consequatur nihil illum veniam atque blanditiis nisi neque ex sed! Fugiat ex fuga expedita facere? Optio exercitationem obcaecati culpa laudantium debitis natus ipsum, deserunt quia nulla autem aspernatur, veniam veritatis quos minus, voluptatum consequatur earum neque suscipit vero nesciunt quis sint. Quasi praesentium ea qui?
+            </p>
+        </div>
+        <br><br>
+
+        <div id="cursor">
+            <span>Cursor:</span> <br>
+            <p>
+                <img src="images/cursor1.png" alt=""> <br>
+                <b>cursor:</b> help; <br>
+                ~~(mouse no arrow badalva). <br>
+                <b>cursor:</b> auto/default/none/context-menu/help/pointer/progress/wait/cell/crpsshair/text/vertical-text/alias/copy/move; <br>
+                <b>cursor:</b> no-drop/not-allowed/e-resize/n-resize/ne-resize/nw-resize/s-resize/se-resize/sw-resize/w-resize/ew-resize/ns-resize/nesw-resize/nwse-resize/col-resize/row-resize/all-scroll/zoom-in/zoom-out/grab*/grabbing*; <br>
+            </p>
+        </div>
+        <br><br>
+        <div id="units">
+            <span>Measurement Units</span> <br>
+            <p>
+                <b>1)Absolute Units:</b> cm/ mm/ in/ pt(points)/ pc(picas)/ px(pixel); <br>
+                ~~absolute units, fixed value aape jethi aema screen ni size ghate to scrolling bar aavi jai; <br>
+                <br>
+                <b>2)Letin Units:</b> %(percentage)/ ch/ ex/ vw(viewport-width)/ vh(viewport-height)/ vmax/ vmin; <br>
+
+                ~~windowns ni screen par depends kare. <br>
+                ~~screen ni size ghate to content adjust thay scrolling bar naa aave. <br>
+            </p>
+
+            <p>
+                <b>em;</b> <br>
+                => By default 1em = 16px; (2em=32px;) (3em=48px;) <br>
+                => but "em" depends on parent font-size; (if parent(body) font is 20px then 2em become (2*20px) = 40px;) <br>
+                ~~ root(html ni fontsize) mujab kam nhi kare. <br>
+                ~~ width / height / font badha ne em units aapi sakiye chhiae. <br>
+            </p>
+            <p>
+                <b>rem;</b> <br>
+                => By default 1rem = 16px; (2em=32px;) (3em=48px;) <br>
+                => but "rem" depends on root font-size; (if root(html) font is 20px then 2em become (2*20px) = 40px;) <br>
+                ~~ parent(body ni fontsize) mujab kam nhi kare. <br>
+                ~~ width / height / font badha ne em units aapi sakiye chhiae. <br>
+            </p>
+            <p>
+                <b>%;</b>(percentage) <br>
+                => percentage, parent mujab kam kare chhe. (parent ni size ghate to child ni size ghate). <br>
+                => vw and vh depends on windows screen viewport but independent to parent size. <br>
+
+            </p>
+            <p>
+                <b>vw;</b> (viewport-width) <br>
+                <b>vh;</b> (viewport-height) <br>
+                => windows screen width divided in 100vw.  <br>
+                => screen ni "width" ghate to vw unit pan ghate. <br>
+                => screen ni "height" ghate to vw unit pan ghate. <br>
+            </p>
+            <p>
+                <b>vmax;</b>  <br>
+                <b>vmin;</b>  <br>
+                => width = 70 vmax; (jyare screen size ghatshe tyare width tya j sudhi ghatse jya sudhi width na 70% nhi thay.) <br>
+                => width: 70 vmin; (je vadhu hoy aenu 70% leshe.) <br>
+                => width: 20 vmin; (je aochhu hoy aenu 70% leshe.) <br>
+            </p>
+        </div>
+        <br><br>
+        
+        <div id="clippath">
+            <span>Clip-path "image crop in shape" :</span>  <br>
+            <img src="images/car.jpg" alt="">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste fugit totam debitis quod! Nulla, ipsa et, excepturi possimus ex cum veritatis sapiente, est quidem doloribus dolorum voluptatem voluptates nesciunt nihil consequatur enim libero deleniti fugit dolores in. Quia repellendus tempore numquam assumenda dignissimos laboriosam quisquam temporibus in, rem dicta! Suscipit.
+            </p>
+            <br>
+            <p>
+                <b>clip-path:</b> circle/ ellipse/ inset(means rectangle)/ polygon; <br>
+
+                => <b>clip-path:circle</b> (40% at 50% 60%); <br>
+                circle( (40%=radius) at (50%=horizontal-axis)  (60%=vertical-axis) ); <br>
+                ~~circle shape ma image ne crop karva. <br><br>
+
+                <b>clip-path: ellipse</b> (10% 40% at 50% 50%); <br>
+                ellipse( (10%=horizontal-radius) (40%=vertical-radius) at (50%=horzontal-axis) (50%=vertical-axis) ); <br>
+                ~~ellipse shape ma image ne crop karva. <br><br>
+                
+                <b>clip-path: inset</b>(5% 20% 15% 10%);
+                inset( (5%=top) (20%=right) (15%=bottom) (10%=left) );
+                ~~rectangle ma image kapva. <br><br>
+
+                <b>clip-path: polygon(50% 0%, 0% 100%, 50% 100%)</b> <br>
+                polygon(h-axis v-axis, h-axis v-axis, h-axis v-axis); <br>
+                ~~ badha j shape ma image ne crop kari shakay. <br>
+                ~~ polygon mate css no code melavva => (http://bennettfeely.com/clippy/ ) <br>
+                <b>for triangle shape</b> => polygon(1st-point, 2nd-point,3rd-point) <br>
+                <b>for rectangle shape</b> => polygon(first-point, second-point,third-point,fourth point) <br>
+            </p>
+            <p>
+                <span>shape-outside:</span> <br>
+                ~~image ne float:left aapvu pade. <br>
+                ~~shape shivay na bhaag ma text ne lavva mate. <br>
+                <b>shape-outside:</b> circle / ellipse / inset / polygon; <br>
+                <br><br>
+                <b><i> ==>*****jevu "clip-path" ma lakhyu hoy, aevu j "shape-outside" ma  lakhvu.**** <==</i></b>
+            </p>
+        </div>
+        <br><br>
+
+
+        <div id="filter">
+            <span>Filter:</span> <br>
+            <img src="images/happy.jpg" alt="">
+            <p>
+                <b>filter:</b> none/ blur()/ brightness()/ saturation()/ contrast()/ drop-shadow()/ grayscale()/ sepia()/ hue-rotate()/ invert()/ opacity()/ url(); <br>
+                    blur(5px); => (0px to 300px ) <br> 
+                    brightness(50%); => (0%(black) to 100% to 1000%) <br>
+                    saturation(200%); => (0%(insaturate) to 100%(default) to 500%) <br>
+                    contrast(500%); => (0% to 100%(dark) to 500%) <br>
+                    drop-shadow(8px 7px 10px red); => (h-offset v-offset blur color) <br>
+                    grayscale(90%); =>(100%(full gray) to 0%(default)); <br>
+                    sepia(0%); => (o%(default) to 100%)<br>
+                    hue-rotate(100deg); => ( 0deg(default) to 360deg ); <br>
+                    invert(100%); => (o%(default) to 100%); <br>
+                    opacity(0%); => (0%(image gayab) to 100%); <br>
+                    none; => (by default) <br>
+                    <!-- url(); () <br> -->
+                    <br>
+                    <b>filter:</b> blur(2px) hue-rotate(360deg) saturate(200%);
+            </p>
+        </div>
+        <br><br>
+
+        <div id="transition">
+            <span>Transition</span> <br>
+            <p>
+                <b>transition-property:</b> width, height, background 2s,4s,8s; <br>
+                <br>
+
+                <b>transition-duration:</b> 2s, 8s, 8s; (ketla time ma puru thavu joiae) <br>
+                <br>
+                <b>transition-delay:</b> 3s; (ketla time pachhi start thavu joiae) <br> 
+                <br>
+                <b>transition-timing-function:</b> cubic-bezier(0.075, 0.82, 0.165, 1);  (steps ma change karva)<br>
+                <b>transition-timing-function:</b> linear/ ease/ ease-in/ ease-out/ ease-in-out/ step-start/ step-end/ steps(9,end)/ steps(3,start)/ cubic-bezier(1.0, 1.0, 1.0, 1.0); <br>
+                ~~ease; => slow start, then fast, than slow end. <br>
+                ~~ease-in; => slow start. <br>
+                ~~ease-out; => slow end. <br>
+                ~~ease-in-out; => slow start than slow end. <br>
+                ~~step-start; => aek step ma start. <br>
+                ~~step-end; => aek step ma end. <br>
+                ~~steps(5,start) or steps(4,end); <br>
+                ~~cubic-bezier(); => (ahiya 4 steps fix chhe); <br>
+                <br>
+                <b>transition:</b> width, height, background 2s,4s,8s cubic-bezier(0.1, 0.7, 1.0, 0.1) 1s; <br>
+
+                <br>
+                <b>transition:</b> all 2s,8s,4s; <br>
+                <b>transition:</b> all 2s cubic-bezier(0.1, 0.7, 1.0, 0.1) 1s; <br>
+                <b>transition:</b> width,height,background 2s,4s,8s cubic-bezier(0.1, 0.7, 1.0, 0.1) 3s;
+            </p>
+        </div>
+
+        <br><br>
+        
+        <div id="transform2d">
+            <span>Transform-2D:</span> <br>
+            <p>
+                 
+
+            </p>
+
+        </div>
     </div>
 
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    hi
 
-
-
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
 </body>
 </html>
