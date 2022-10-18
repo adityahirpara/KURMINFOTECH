@@ -5,15 +5,32 @@
         <link rel="stylesheet" href="textcolor.css">
         <!-- <link rel="stylesheet" href="https://fonts.google.com/knowledge"> -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head>
+</head> 
 <body>
     <h1 class="head">Heading welcome</h1>
     
-    <p class="border"><span>border:</span><br><br>
-        <b>border : width style color;</b>
+    <div class="border"><span>border:</span><br><br>
+        <b>border-width:</b> 20px;
+        <b>border-style:</b> solid;
+        <b>border-color:</b> green;
+        <b>border:</b> width style color; (aek line ma lakhva)
         <br>
-        (style=solid dotted dashed double groove ridge inset outset none )
-    </p>
+        style; => solid dotted dashed double groove ridge inset outset none. <br>
+    </div>
+
+    <br><br>
+
+    <div class="borderimage"><span>border-image:</span><br><br>
+        ~~border ma gradient + image aapva mate. <br>
+        
+        <b>border-image-source:</b> url(images/flower.jpg); (border ma image aapva)<br>
+        <b>border-image-slice:</b> 21 / 21px ; (image ne crop kare 21pixel jetli.) <br>
+        <b>border-image-width:</b> ; <br>
+        <b>border-image-outset:</b> ; <br>
+        <b>border-image-repeat:</b> repeat / stretch / round / space; () <br>
+        <br>
+        <b>border-image:</b> source  slice/width/outset  repeat;
+    </div>
     
     <p class="outline">
         <span>outline:</span>
@@ -88,6 +105,13 @@
             <b>box-sizing: content-box;</b> (box ni size fix nh rhe padding and border ni width sathe change thashe) 
             <br><br>
             ~jo padding aapiae to height vadhi jase pn width same rehse (border-box thi)  
+        </p> 
+        <br>
+        <p>
+            <span>Box-decoration-break:</span> <br>
+            <b>box-decoration-break:</b> clone / slice; <br> <br>
+            clone; => je jagya ae "br" tag lakhyu hoy ane end thato hoy tya break "br" ni badhi j jajgya ae (clone) vaoaray. <br>
+            slice; =>  by default.
         </p>
 
     </div>
@@ -251,7 +275,19 @@
 
         </p>
         <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsam ratione aspernatur quisquam, quos nihil perspiciatis ab quae sequi illo.
+            <span>User-select:</span> <br>
+            user-select: none / all / auto / text; <br>
+            ~~website ma rahel text ne koi copy na kare aetle "none" vaparvu. <br>
+            none; => no select no copy. <br>
+            all; => single click thi all select, all copy at once. <br>
+            auto; =>  text slect by mouse,  ahi browser mathi allowed na hoy to text select na thay. <br>
+            tetx; => browser ma thi, text select allowed na hoy to pn text select karva. <br>
+         </p> 
+         <p>
+            <span>Quotes:</span> <br>
+            <b>quotes:</b> "$"(start mate) "&"(end mate)  /  "ahiya game te lakho ae line ni pahela aave"  "ahiya je lakho ae line ni chhelle aave"; <br>
+            ~~html ma "q" tag lakvo pade pachhi j aenu css thay. <br>
+            ~~css karta pehla html ma "q" tag lakhvo pchhi css ma b <q>(qoutes: ""  "";)</q> vaparay. <br>
          </p>
          
     </div>
@@ -415,14 +451,14 @@
             text; => image, text ma convert thai jai. (text no color image jevo thai) (image + text = mix thai) <br>
         </p>
 
-    </div>
+        </div>
     
-    <br><br>
+        <br><br>
 
-    <div id="gradients">
-        <div class="linear_gradient">
-            <span>linear-gradient:</span>
-            <p>
+        <div id="gradients">
+            <div class="linear_gradient">
+                <span>linear-gradient:</span>
+                <p>
                 <b>background:</b> linear-gradient / radial-gradient / repeating-linear-gradient / repeating-radial-gradient; <br>
                 <br>
                 <b>linear-gradient( direction , color , color , color )</b> <br><br>
@@ -438,8 +474,10 @@
                 <b>background:</b> repeating-linear-gradient(direction, color in %, color in %, color in %); <br>
                 <b>background:</b> linear-gradient(red 10%, yellow 20%, blue 30%); <br>
                 <b>~~~~reapeating gradient ma color ne percentage ma leva)</b><br>
-            </p>
+                </p>
+            </div>
         </div>
+
         <div class="radial_gradient">
             <span>radial-gradient:</span>
             <p>
@@ -791,115 +829,245 @@
         <div id="transform2d">
             <span>Transform-2D:</span> <br>
             <p>
-                 
-
             </p>
+        </div>
+
+        <br><br>
+
+        <div id="animation">
+
+            <div class="animate">
+                <span>Animation</span>
+                <p>
+                    @keyframes aditya {<br>
+                        from{border-radius: 0%; background-color: rgb(255, 60, 0);} <br>
+                        to{border-radius: 50%; color: white; background-color: blueviolet;} <br>
+                    } <br> <br>
+                    @keyframes aditya { <br>
+                        0%{border-radius: 0%; background-color: rgb(255, 60, 0);} <br>
+                        20%{border-radius: 20%; color: white; background-color: blueviolet;} <br>
+                        30%{border-radius: 30%; color: red; background-color: blueviolet;} <br>
+                        40%{border-radius: 40%; color: blue; background-color: blueviolet;} <br>
+                        50%{border-radius: 50%; color: green; background-color: blueviolet;} <br>
+                    } <br>
+                    ~~@keyframes "aditya aa name" animation-name ma lakhvu. <br>
+                </p>
+                <br>
+                <p>
+                    <b>animation-name:</b> aditya(@keyframes pachhi je name hoy ae ahi lakhvu); <br>
+                    <b>animation-duration:</b> 2s; <br>
+                    <b>animation-timing-function:</b> cubic-bezier(0.075, 0.82, 0.165, 1); <br>
+                    <b>animation-delay:</b> 5s; <br>
+                    <b>animation-iteration-count:</b> infinite / 1 / 2 / 3 / 50 / 100 / 500 / infinite; (jetlivar animation chalu rakhvu hoy) <br>
+                    <b>animation-direction:</b> alternate-reverse / alternate / reverse / default ; (sharuaat je jagya ae thi karvi hoy aena mate chhe.) <br>
+                    <b>animation-fill-mode:</b> both(backwords + forwords) / backwords(animation-direction mujab kam karse) / forwords(pahela initial positon par rehse pachhi "animation-direction mujab kam karshe") / none; <br> 
+                    
+                    <b>animation-play-state:</b> paused(animation stop) / running(animation running when cursor on box); (box ne hover aapelu hoy pn jevu cursor animation par jase aetle animation "paused" this stop thashe.)<br>
+                </p>
+                <br>
+
+                <p>
+                    <b>animation:</b> animation-name animation-duration animation-timing-functionan animation-delay animation-iteration-count animation-direction animation-fill-mode; <br>
+                    ~~ upar ni sequence mujab "animation" aapvu; 
+                </p>
+            </div>
+        </div>
+        
+        <br>
+
+        <div id="objectfit">
+            <span>object-fit:</span> <br><br>
+            <div class="objectfitimg1">
+                <img src="images/flower.webp" alt="">
+                <p>
+                    <b>object-fit:</b> fill / contain / cover / scale-down / none; <br>
+                    ~~ screen size ghate aem image stretch thay. <br>
+                    fill; => image stratch thay. <br>
+                    contain; => aakhi image rakhva. <br> 
+                    cover; => left-right side thi image ni sixe ghate. <br>
+                    scale-down; => image aakhi rakhva. <br>
+                    none; =. by default image ni width change na thay. <br>
+                </p>
+            </div>
+            <div class="objectfitimg2">
+                <img src="images/flower.webp" alt="">
+                <p>
+                    <b>object-positon:</b> 30px 40px 50px 60px; =>(top right bottom left;) <br>
+                    ~~by default image center ma j aave pn screen size ghate tyare crop upar thi kari sakiye. <br>                
+                </p>
+            </div>
+            <div class="objectfitimg3"></div>
+        </div>
+        
+        <br><br>
+
+        <div>
 
         </div>
-    </div>
 
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    hi
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
+   <br><br><br>
 
 </body>
 </html>
