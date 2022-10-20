@@ -23,14 +23,35 @@
     <div class="borderimage"><span>border-image:</span><br><br>
         ~~border ma gradient + image aapva mate. <br>
         
-        <b>border-image-source:</b> url(images/flower.jpg); (border ma image aapva)<br>
-        <b>border-image-slice:</b> 21 / 21px ; (image ne crop kare 21pixel jetli.) <br>
-        <b>border-image-width:</b> ; <br>
-        <b>border-image-outset:</b> ; <br>
-        <b>border-image-repeat:</b> repeat / stretch / round / space; () <br>
+        <b>border-image-source:</b> url(images/flower.jpg); <br> 
+        ~~(border ma image aapva)<br>
+        <b>border-image-slice:</b> 21 11; or 21px 11px; <br> 
+        ~~(image ne (width and height)crop karva`) <br>
+        <b>border-image-width:</b> 20px; <br>
+        ~~jo width vadhe to crop image ni width 0vadhe jethi crop image ni sankhy ghate + border & contain overlap thashe. <br>
+        <b>border-image-outset:</b> 20px; <br>
+        ~~outset thi crop image 20 pixel ma border thi bahar lai java mate chhe. <br>
+        <b>border-image-repeat:</b> repeat / stretch / round / space; <br>
+        <b>border-image-repeat:</b> repeat stretch; (top-bottom ma repeat) (right-left ma stretch) <br>
+        repeat; => crop image ne repeat(horizontally and vertically repeat) karva. pn problem "aana thi crop image corner par barabar na aave." <br>
+        round; => crop image sakhaye dekhashe ane roud ma j aavse + "problem solve: corner par ni image barabar dekhashe." <br>
+        space; => be crop-image vachche space rakhva. <br>
+        stretch; => horizontally and vertically "crop-image" stretch thashe and corner par aek single crop image aavseh. (by default)<br>
         <br>
-        <b>border-image:</b> source  slice/width/outset  repeat;
+        <b>border-image: source slice/width/outset    repeat;</b> <br><br>
+        <b>border-image: </b> linear-gradient 21/15px/5px round; <br>
+        <br>
+        <br>
+        <h1>Example:</h1>
+            border-image-source:url("images/borderimage.png"); <br>
+            border-image-slice:24 27 27 27; <br>
+            border-image-width:20px 20px 20px 20px; <br>
+            border-image-outset:0px 0px 0px 0px; <br>
+            border-image-repeat:stretch stretch; <br>
+            border-style:solid;  <br>
     </div>
+
+    <br><br>
     
     <p class="outline">
         <span>outline:</span>
@@ -41,6 +62,8 @@
         <br>
         <b>outline-offset: 10px;</b> (gap betweenoutline and border )
     </p>
+
+    <br><br>
 
 
     <p class="padding">
@@ -117,8 +140,8 @@
     </div>
 
     <div id="overflow">
-        <p>
-            <span>overflow:</span>
+        <p  class="flowroot">
+            <span>overflow: + text-overflow: + flow-root: </span>
             <p>
                 <img src="images/car.jpg" alt="">
             </p>
@@ -142,6 +165,13 @@
                 <b>text-overflow:</b> ellipsis; (ellipsis sathe white-space: nowrap; and overflow:hiddemn; lakhvu jaruri) <br>
                 <b>text-overflow:</b> string, <br>
                 <h2>text-overflow:"etc."; <br> aavu lakhiye to overflow thaya pachhi aavu[etc.] lakhelu aave.</h2> <br><br> 
+            </p>
+
+
+            <span>display:flow-root;</span> <br>\
+            <p>
+                ~~ float:left; aapiae tyare overflow no problem aave. <br>
+                ~~ parent tag ma vaparvu and child tag ma float:left; vaparvu. <br>
             </p>
         </p>
 
@@ -901,9 +931,18 @@
         
         <br><br>
 
-        <div>
-
+        <div id="caretcolor">
+            <p>
+                <b>caret-color:</b> red; <br>
+                ~~"form" tag na type="text" and type="textarea" banne ma caret(blink thati ubhi line). <br>
+                ~~caret-color: transparent; => caret blink kartu  dekhashe nahi pn typing thashe. <br>
+            </p>
+            <form action="">
+                <input type="text" id="textarea"> <= aa form tag nu textardea chhe.
+            </form>
         </div>
+
+
 
    <br><br><br>
    <br><br><br>
